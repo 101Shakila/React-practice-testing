@@ -5,6 +5,6 @@ const path = require('path');
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.listen(3000, function () {
-    console.log('App started on port 3000');
+app.listen(3001, function () {
+    console.log('App started on port 3001');
 });

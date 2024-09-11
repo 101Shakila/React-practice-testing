@@ -6,6 +6,10 @@
 //     </div>
 // );
 
+const {
+  RotateInDownLeft
+} = require("react-native-reanimated");
+
 // ReactDOM.render(element, document.getElementById("contents"));
 
 // class HelloWorld extends React.Component {
@@ -53,7 +57,27 @@ class IssueRow extends React.Component {
 }
 class IssueFilter extends React.Component {
   render() {
-    return /*#__PURE__*/React.createElement("div", null, "This is a placeholder for IssueFilter");
+    const rowStyle = {
+      border: "1px solid silver",
+      padding: 4
+    };
+    return /*#__PURE__*/React.createElement("table", {
+      style: {
+        borderCollapse: "collapse"
+      }
+    }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+      style: rowStyle
+    }, "ID"), /*#__PURE__*/React.createElement("th", {
+      style: rowStyle
+    }, "Title"))), /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement(IssueRow, {
+      rowStyle: rowStyle,
+      issue_id: 1,
+      issue_title: "Error in console when clicking Add"
+    }), /*#__PURE__*/React.createElement(IssueRow, {
+      rowStyle: rowStyle,
+      issue_id: 2,
+      issue_title: "Missing bottom of the pandel"
+    })));
   }
 }
 class IssueTable extends React.Component {
